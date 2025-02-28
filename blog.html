@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DevBoard</title>
+    <link rel="icon" href="./assets/logo.svg" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+  </head>
+  <body class="bg-slate-100 m-5">
+    <nav
+      class="bg-white h-24 rounded-2xl p-5 flex justify-between align-middle items-center"
+    >
+      <div class="flex gap-3 justify-center align-middle items-center">
+        <img class="w-11" src="./assets/logo.svg" alt="logo" />
+        <p class="text-2xl">Dev<b>Board</b></p>
+      </div>
+      <div class="flex gap-5 justify-center align-middle items-center">
+        <button
+          style="color: #fff"
+          class="bg-[#3752FD] px-4 py-2 rounded-lg cursor-pointer"
+          onclick="location.href='index.html'"
+        >
+          Back To Desk
+        </button>
+      </div>
+    </nav>
+    <section>
+      <h1 class="text-3xl text-center font-bold m-5">Blogs</h1>
+      <div class="bg-white rounded-xl mt-5">
+        <p class="font-semibold p-5">
+          Question-1: What are the different ways to select an element in the
+          DOM?
+        </p>
+        <hr />
+        <p class="p-5">
+          There are a several ways to select an element in the DOM:
+          <br /><br />
+          1. ID: document.getElementById("id"); <br />
+          2. Class Name: document.getElementByClassName("class"); <br />
+          3. Tag Name: document.getElementByTagName("tag"); <br />
+          4. Query: document.querySelector("query"); <br />
+          document.querySelectorAll("query");
+        </p>
+      </div>
+      <div class="bg-white rounded-xl mt-5">
+        <p class="font-semibold p-5">
+          Question-2: What is the difference between innerHTML, innerText, and
+          textContent ?
+        </p>
+        <hr />
+        <p class="p-5">
+          InnerHTML: Gets or sets the HTML content within an element, including
+          HTML tags.<br />
+          InnerText: Gets or sets the visible text content of an element, as it
+          would appear on the rendered page. <br />
+          textContent: Gets or sets the text content of an element, including
+          all child nodes. It returns the raw text, regardless of styling or
+          visibility.
+        </p>
+      </div>
+      <div class="bg-white rounded-xl mt-5">
+        <p class="font-semibold p-5">
+          Question-3: What is event delegation in the DOM?
+        </p>
+        <hr />
+        <p class="p-5">
+          Event delegation leverages event bubbling by attaching a single
+          listener to a parent element, which then handles events originating
+          from its children by checking the "event.target", improving
+          performance and simplifying event management, especially for
+          dynamically added elements.
+        </p>
+      </div>
+      <div class="bg-white rounded-xl mt-5">
+        <p class="font-semibold p-5">
+          Question-4: What is event bubbling in the DOM?
+        </p>
+        <hr />
+        <p class="p-5">
+          In the DOM, event bubbling describes the event's propagation from the
+          point where the event triggered itself, upwards through the element's
+          parent chain (or hierarchy). In short, when you click a nested element
+          that click event will also be detected by its parent, grandparent, etc
+          etc up the document root.
+        </p>
+      </div>
+      <div class="bg-white rounded-xl mt-5">
+        <p class="font-semibold p-5">
+          Question-5: How do you create, add, and remove elements using
+          JavaScript?
+        </p>
+        <hr />
+        <p class="p-5">
+          1. Creating Elements: document.createElement("tagName") <br />
+          2. Adding Elements: parentElement.appendChild(newElement) <br />
+          3. Removing Elements: parentElement.removeChild(elementToRemove)
+          <br />
+          element.remove()
+        </p>
+      </div>
+    </section>
+  </body>
+</html>
