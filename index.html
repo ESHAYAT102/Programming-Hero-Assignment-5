@@ -21,10 +21,15 @@
           class="bg-slate-100 py-3 px-5 rounded-full flex gap-4 justify-center align-middle items-center"
         >
           <img class="w-8" src="./assets/checkbox.svg" alt="icon" />
-          <p class="text-xl font-bold">23</p>
+          <p id="task-score" class="text-xl font-bold">23</p>
         </div>
         <div>
-          <img class="h-14" src="./assets/theme-btn.svg" alt="theme icon" />
+          <img
+            id="theme-btn"
+            class="h-14"
+            src="./assets/theme-btn.svg"
+            alt="theme icon"
+          />
         </div>
       </div>
     </nav>
@@ -39,7 +44,7 @@
             </div>
             <div>
               <p class="text-lg font-medium">Task Assigned</p>
-              <p class="text-2xl font-bold">06</p>
+              <p id="task-assigned" class="text-2xl font-bold">6</p>
             </div>
           </div>
           <div
@@ -85,6 +90,7 @@
               </div>
               <div>
                 <button
+                  onclick="btnClick()"
                   style="color: #fff"
                   class="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-lg cursor-pointer disabled:opacity-60 disabled:cursor-default transition-all duration-300"
                 >
@@ -109,6 +115,7 @@
               </div>
               <div>
                 <button
+                  onclick="btnClick()"
                   style="color: #fff"
                   class="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-lg cursor-pointer disabled:opacity-60 disabled:cursor-default transition-all duration-300"
                 >
@@ -133,6 +140,7 @@
               </div>
               <div>
                 <button
+                  onclick="btnClick()"
                   style="color: #fff"
                   class="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-lg cursor-pointer disabled:opacity-60 disabled:cursor-default transition-all duration-300"
                 >
@@ -157,6 +165,7 @@
               </div>
               <div>
                 <button
+                  onclick="btnClick()"
                   style="color: #fff"
                   class="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-lg cursor-pointer disabled:opacity-60 disabled:cursor-default transition-all duration-300"
                 >
@@ -181,6 +190,7 @@
               </div>
               <div>
                 <button
+                  onclick="btnClick()"
                   style="color: #fff"
                   class="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-lg cursor-pointer disabled:opacity-60 disabled:cursor-default transition-all duration-300"
                 >
@@ -205,6 +215,7 @@
               </div>
               <div>
                 <button
+                  onclick="btnClick()"
                   style="color: #fff"
                   class="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-lg cursor-pointer disabled:opacity-60 disabled:cursor-default transition-all duration-300"
                 >
@@ -222,6 +233,7 @@
             <p class="text-xl font-semibold">Activity Log</p>
           </div>
           <button
+            id="clear-history"
             style="color: #fff"
             class="bg-blue-600 px-4 py-2 rounded-lg font-semibold my-5 cursor-pointer hover:bg-blue-700 transition-all duration-300"
           >
@@ -229,6 +241,7 @@
           </button>
         </div>
         <hr />
+        <div class="mt-5" id="activity-log"></div>
       </div>
     </div>
     <script src="./script.js"></script>
