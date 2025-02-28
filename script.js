@@ -109,4 +109,41 @@ document.addEventListener("DOMContentLoaded", function () {
   }
   displayDayOfWeek();
   displayFormattedDate();
+
+  const themeButton = document.getElementById("theme-btn");
+
+  const body = document.body;
+
+  const themeColors = [
+    "bg-blue-100",
+    "bg-red-100",
+    "bg-violet-100",
+    "bg-pink-100",
+    "bg-green-100",
+    "bg-orange-100",
+  ];
+
+  let currentColorIndex = 0;
+
+  const initialBgClass = Array.from(body.classList).find((cls) =>
+    cls.startsWith("bg-")
+  );
+
+  if (initialBgClass) {
+    themeColors.unshift(initialBgClass);
+  }
+
+  if (themeButton) {
+    themeButton.addEventListener("click", function () {
+      body.classList.forEach((cls) => {
+        if (cls.startsWith("bg-")) {
+          body.classList.remove(cls);
+        }
+      });
+
+      body.classList.add(themeColors[currentColorIndex]);
+
+      currentColorIndex = (currentColorIndex + 1) % themeColors.length;
+    });
+  }
 });
